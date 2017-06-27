@@ -1,12 +1,21 @@
 # INSTALLAZIONE GIT
 
-[GIT download](https://git-scm.com/downloads)
+[GIT download](https://git-scm.com/downloads) - Software GIT ufficiale. 
 
-[Plugin VisualStudio](PluginVisualStudio.md)
+## Configurazione primo utilizzo
 
-# CREAZIONE DI UN REPOSITORY LOCALE
+Da shell configura git digitando i comandi:
+```
+git config --global user.name "John Smith" 
+git config --global user.email john@example.com
+```
+## Plugin per Visual Studio
 
-Richiama la _git bash_ e all'interno della shell, crea una directory es: _learn_git_)
+[Plugin VisualStudio](PluginVisualStudio.md) - plugin per abilitare _GIT_ per _Visual Studio 2008_. Da _Visual Studio 2015_ esiste un plugin ufficile Microsoft. 
+
+# CREAZIONE DI UN REPOSITORY LOCALE - GIT INIT
+
+Richiama la _git bash_ e all'interno della shell, crea una directory (es: _learn_git_)
 
 `mkdir learn_git`
 
@@ -144,7 +153,7 @@ origin  https://github.com/MassimoCappellano/try_git_example.git (push)
 
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 ```
-# MODIFICA REPOSITORY LOCALE
+# MODIFICA WORKING AREA
 
 modifica file _pippo.txt_
 
@@ -232,6 +241,15 @@ git clone [--template=<template_directory>]
 ## ESERCIZI
 
 https://www.atlassian.com/git/tutorials completare _Getting Start_
+
+## REFERENZE
+
+https://www.atlassian.com/git
+
+[Pro Git](https://git-scm.com/book/it/v2) Book
+
+
+
 
 
 
