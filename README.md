@@ -3,18 +3,6 @@
 [GIT download](https://git-scm.com/downloads) - Software GIT ufficiale. 
 
 ## Configurazione primo utilizzo
-<<<<<<< HEAD
-=======
-
-Da shell configura git digitando i comandi:
-```
-git --global user.name "John Smith" 
-git config --global user.email john@example.com
-```
-## Plugin per Visual Studio
-
-[Plugin VisualStudio](PluginVisualStudio.md) - plugin per abilitare _GIT_ per _Visual Studio 2008_. Da _Visual Studio 2015_ esiste un plugin ufficile Microsoft. 
->>>>>>> 5a13eab720f7480c939be06779583749bf27bee5
 
 Da shell configura git digitando i comandi:
 ```
@@ -25,11 +13,8 @@ git config --global user.email john@example.com
 
 [Plugin VisualStudio](PluginVisualStudio.md) - plugin per abilitare _GIT_ per _Visual Studio 2008_. Da _Visual Studio 2015_ esiste un plugin ufficile Microsoft. 
 
-<<<<<<< HEAD
 # CREAZIONE DI UN REPOSITORY LOCALE - GIT INIT
 
-=======
->>>>>>> 5a13eab720f7480c939be06779583749bf27bee5
 Richiama la _git bash_ e all'interno della shell, crea una directory (es: _learn_git_)
 
 `mkdir learn_git`
