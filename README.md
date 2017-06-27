@@ -2,7 +2,7 @@
 
 [GIT download](https://git-scm.com/downloads)
 
-[Plugin VisualStudio](PluginVisualStudio)
+[Plugin VisualStudio](PluginVisualStudio.md)
 
 # CREAZIONE DI UN REPOSITORY LOCALE
 
