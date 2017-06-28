@@ -132,7 +132,7 @@ Attualmente nessun repository remoto è stato agganciato.
 
 # .gitignore
 
-Se vogliamo che alcuni tipi di file siano ignorati da git, vanno inseriti nel file _.gitignore_ da creare nella direcory di progetto. Anche questo file in genere viene salvato nel repository.
+Se vogliamo che alcuni tipi di file siano ignorati da git, vanno inseriti nel file _.gitignore_ da creare nella directory di progetto. Anche questo file in genere viene salvato nel repository.
 
 Ad esempio in genere non vengono salvati gli eseguibili e quindi in .gitignore si nette una riga:
 
