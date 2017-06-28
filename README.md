@@ -2,7 +2,7 @@
 
 [GIT download](https://git-scm.com/downloads) - Software GIT ufficiale. 
 
-## Configurazione primo utilizzo
+## Configurazione e setup primo utilizzo: git config 
 
 Da shell configura git digitando i comandi:
 ```
@@ -13,7 +13,7 @@ git config --global user.email john@example.com
 
 [Plugin VisualStudio](PluginVisualStudio.md) - plugin per abilitare _GIT_ per _Visual Studio 2008_. Da _Visual Studio 2015_ esiste un plugin ufficile Microsoft. 
 
-# CREAZIONE DI UN REPOSITORY LOCALE - GIT INIT
+# CREAZIONE DI UN REPOSITORY LOCALE: git init
 
 Richiama la _git bash_ e all'interno della shell, crea una directory (es: _learn_git_)
 
@@ -21,11 +21,19 @@ Richiama la _git bash_ e all'interno della shell, crea una directory (es: _learn
 
 `cd learn_git`
 
-Per inizializzare il repository locale:
+Per inizializzare il repository locale, dall'interno quindi della directory di progetto:
 
 `git init`
 
-## ANALISI REPOSITORY INIZIALE
+viene inizializzato così il repository locale. 
+Eseguendo il comando all'interno della repository `ls -la` si notano la directory nascosta _.git_ che contiene le informazioni del repository.
+
+
+Esiste anche il comando `git init <repo_name>` per creare il repository: ammettiamo di essere in una directory chiamato _worksapce_, da qui digito il comando `git init mio_repo`; viene così creato il repository _mio_repo_ sotto la directory _workspace_.
+
+Vedi anche [git clone](#CLONAZIONE DI UN REPOSITORY REMOTO: git clone)
+
+## ANALISI REPOSITORY: git status
 
 Comando `git status`
 
@@ -38,9 +46,9 @@ Initial commit
 
 nothing to commit (create/copy files and use "git add" to track)
 ```
-## FARE UNA COMMIT
+## SALVARE I CAMBIAMENTI AL REPOSITORY: git add e git commit
 
-Per salvare un file o più file è necessario:
+Per salvare nel repository un file o più file della working area è necessario:
 1. aggiungere le risorse da salvare nel repository all'area di staging.
 1. eseguire la commit
 
@@ -126,7 +134,16 @@ Creazione account su GitHub https://github.com
 
 Crea un repository public con un nome.
 
-# Aggiunta al REPOSITORY LOCALE del REPOSITORY REMOTO
+# Aggiunta al REPOSITORY LOCALE del REPOSITORY REMOTO: git remote add
+
+Una volta creato un repository remoto, è necessario agganciarlo al repository locale:
+
+`git remote add <remote_name> <remote_repo_url>`
+
+_<remote_name>_ in genere _origin_ per convenzione
+
+_<remote_repo_url>_, url del repository remoto
+
 
 ```
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
@@ -153,7 +170,7 @@ origin  https://github.com/MassimoCappellano/try_git_example.git (push)
 
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 ```
-# MODIFICA WORKING AREA
+# REPOSITORY to REPOSITORY COLLABORATION: git push
 
 modifica file _pippo.txt_
 
@@ -211,9 +228,10 @@ To https://github.com/MassimoCappellano/try_git_example.git
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 
 ```
-# CLONAZIONE DI UN REPOSITORY REMOTO
+# CLONAZIONE DI UN REPOSITORY REMOTO: git clone
 
-Per collaborare.
+Se un progetto è già presente su un repository centrale, è possibile con `git clone <repo_url>` 
+ottenere una copia locale.
 
 ```
 cam@DESKTOP-6FO16O4 MINGW64 /d/TEST
