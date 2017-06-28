@@ -239,6 +239,10 @@ cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 Se un progetto è già presente su un repository centrale, è possibile con `git clone <repo_url>` 
 ottenere una copia locale.
 
+_<repo_url>_ è l'indirizzo della repository remoto che si vuole clonare.
+
+![repo_clone](https://raw.githubusercontent.com/MassimoCappellano/learn_git/master/clone_repo.PNG)
+
 ```
 cam@DESKTOP-6FO16O4 MINGW64 /d/TEST
 $ git clone https://github.com/MassimoCappellano/try_git_example.git
