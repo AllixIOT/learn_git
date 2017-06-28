@@ -33,7 +33,7 @@ Esiste anche il comando `git init <repo_name>` per creare il repository: ammetti
 
 Vedi anche [git clone](#clonazione-di-un-repository-remoto-git-clone)
 
-## ANALISI REPOSITORY: git status
+# ANALISI REPOSITORY: git status
 
 Comando `git status`
 
@@ -46,11 +46,11 @@ Initial commit
 
 nothing to commit (create/copy files and use "git add" to track)
 ```
-## SALVARE I CAMBIAMENTI AL REPOSITORY: git add e git commit
+# SALVARE I CAMBIAMENTI AL REPOSITORY: git add e git commit
 
 Per salvare nel repository un file o più file della working area è necessario:
-1. aggiungere le risorse da salvare nel repository all'area di staging.
-1. eseguire la commit
+1. aggiungere le risorse da salvare nel repository all'area di staging: `git add`
+1. eseguire la commit: `git commit`
 
 Aggiungere un file:
 
@@ -127,6 +127,28 @@ cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 Controllo repository remoti.
 
 `git remote -v`
+
+Attualmente nessun repository remoto è stato agganciato.
+
+# .gitignore
+
+Se vogliamo che alcuni tipi di file siano ignorati da git, vanno inseriti nel file _.gitignore_ da creare nella direcory di progetto. Anche questo file in genere viene salvato nel repository.
+
+Ad esempio in genere non vengono salvati gli eseguibili e quindi in .gitignore si nette una riga:
+
+```
+
+#.gitignore esempio
+
+*.exe
+
+```
+
+In genere in file _.gitignore_ si specificano directory e pattern di file. 
+
+\# è usato per il commento su linea.
+
+[Qui esempio](VisualStudio.gitignore) di un template di _.gitignore_ per ambiente Visual Studio.
 
 # CREAZIONE DI UN REPOSITORY REMOTO 
 
@@ -265,6 +287,9 @@ git clone [--template=<template_directory>]
 	  [--recursive | --recurse-submodules] [--[no-]shallow-submodules]
 	  [--jobs <n>] [--] <repository> [<directory>]
 ```
+## git init vs git clone
+
+`git init` e `git clone` possono essere facilmente confusi. Ad alto livello, entrambi possono essere utilizzati per inizializzare un repository. Tuttavia, `git clone` è dipendente da `git init`. `git clone` è usato per creare una copia di un repositoty esistente. Al suo interno `git clone` prima chiama `git init` per creare un nuovo repository, poi copia i dati dal repository esistente.
 
 ## ESERCIZI
 
