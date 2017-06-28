@@ -31,7 +31,7 @@ Eseguendo il comando all'interno della repository `ls -la` si notano la director
 
 Esiste anche il comando `git init <repo_name>` per creare il repository: ammettiamo di essere in una directory chiamato _worksapce_, da qui digito il comando `git init mio_repo`; viene così creato il repository _mio_repo_ sotto la directory _workspace_.
 
-Vedi anche `git clone` sotto: *CLONAZIONE DI UN REPOSITORY REMOTO: git clone*
+Vedi anche [git clone](#clonazione-di-un-repository-remoto-git-clone)
 
 ## ANALISI REPOSITORY: git status
 
