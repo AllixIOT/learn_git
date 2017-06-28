@@ -134,7 +134,7 @@ Attualmente nessun repository remoto è stato agganciato.
 
 Se vogliamo che alcuni tipi di file siano ignorati da git, vanno inseriti nel file _.gitignore_ da creare nella directory di progetto. Anche questo file in genere viene salvato nel repository.
 
-Ad esempio in genere non vengono salvati gli eseguibili e quindi in .gitignore si nette una riga:
+Ad esempio in genere non vengono salvati gli eseguibili e quindi in _.gitignore_ si nette una riga:
 
 ```
 
@@ -149,6 +149,10 @@ In genere in file _.gitignore_ si specificano directory e pattern di file.
 \# è usato per il commento su linea.
 
 [Qui esempio](VisualStudio.gitignore) di un template di _.gitignore_ per ambiente Visual Studio.
+
+I file _.gitignore_ si possono creare anche in sottodirectory e vengono in genere inseriti in caso si voglia creare una directory vuota che venga salvata nel repository; le directory vuote non vengono salvate da git, allora nella directory si crea un file _.gitignore_ che essendo un file fa si che l'operazione commit salvi anche la directory vuota.
+
+Es tipico, la directory di log: si vuole che la directory dei log sia presente sul repository ma non il contenuto, i file di log, che non devono essere salvati su repository. 
 
 # CREAZIONE DI UN REPOSITORY REMOTO 
 
