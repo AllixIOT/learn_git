@@ -134,6 +134,11 @@ Creazione account su GitHub https://github.com
 
 Crea un repository public con un nome.
 
+[[https://github.com/AllixIOT/learn_git/blob/master/new_repo1.PNG|alt=click button]]
+
+[[https://github.com/AllixIOT/learn_git/blob/master/new_repo2.PNG]]
+
+
 # Aggiunta al REPOSITORY LOCALE del REPOSITORY REMOTO: git remote add
 
 Una volta creato un repository remoto, è necessario agganciarlo al repository locale:
