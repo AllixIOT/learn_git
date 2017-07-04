@@ -299,6 +299,8 @@ git clone [--template=<template_directory>]
 
 https://www.atlassian.com/git/tutorials completare _Getting Start_
 
+poi la parte _Collaborating_ per lavorate con repositori remoti.
+
 ## REFERENZE
 
 https://www.atlassian.com/git
