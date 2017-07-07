@@ -295,7 +295,27 @@ git clone [--template=<template_directory>]
 
 `git init` e `git clone` possono essere facilmente confusi. Ad alto livello, entrambi possono essere utilizzati per inizializzare un repository. Tuttavia, `git clone` è dipendente da `git init`. `git clone` è usato per creare una copia di un repositoty esistente. Al suo interno `git clone` prima chiama `git init` per creare un nuovo repository, poi copia i dati dal repository esistente.
 
-## ESERCIZI
+## ESERVIZI DA SVOLGERE: 1° lezione
+
+### ESERCIZIO UNO 
+
+* creare un repository locale;
+
+* committare delle risorse sul repository locale;
+
+* eseguire anche in diversi step più operazioni di `add` e di `commit` sul repository locale;
+
+* verificare con `git log` il contenuto;
+
+* creare un repository remoto su github (pubblico o privato non fa differenza);
+
+* pubblicare il contenuto del repository locale sul repository remoto;
+
+* verificare il contenuto da interfaccia web di github;
+
+* eseguire in un' altra directory l'operazione di `clone` del repository remoto;
+
+## TUTORIALS
 
 https://www.atlassian.com/git/tutorials completare _Getting Start_
 
