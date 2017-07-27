@@ -88,9 +88,7 @@ Changes to be committed:
 
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 ```
-`git log --oneline`
-
-`git commit` 
+Per salvare nel repository locale le modifiche dell'area di _staging_, eseguire `git commit` 
 
 ```
 $ git commit
@@ -100,9 +98,7 @@ $ git commit
 
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 ```
-esegui di nuovo `git log`
-
-Modifica file `pippo` ed esecuzione seconda commit.
+esegui il comando `git log` per vedere lo storico delle commit o _commit history_
 
 ```
 $ git log
@@ -124,11 +120,7 @@ e0194cd (HEAD -> master)  Initial commit
 
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 ```
-Controllo repository remoti.
-
-`git remote -v`
-
-Attualmente nessun repository remoto è stato agganciato.
+Vedi per approfondire [Commit history](COMMIT_HISTORY.md).
 
 # .gitignore
 
