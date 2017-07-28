@@ -402,6 +402,8 @@ https://www.atlassian.com/git/tutorials completare _Getting Start_
 
 poi la parte _Collaborating_ per lavorare con repositori remoti.
 
+Un altro approccio per imparare git: [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
+
 ## REFERENZE
 
 https://www.atlassian.com/git
