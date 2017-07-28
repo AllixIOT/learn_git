@@ -204,7 +204,7 @@ $ git log --oneline --decorate
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
 
 ```
-
+[Perchè usare `git rm` invece del semplice `rm`](https://stackoverflow.com/questions/7434449/why-use-git-rm-to-remove-a-file-instead-of-rm)
 # .gitignore
 
 Se vogliamo che alcuni tipi di file siano ignorati da git, vanno inseriti nel file _.gitignore_ da creare nella directory di progetto. Anche questo file in genere viene salvato nel repository.
