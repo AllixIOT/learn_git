@@ -46,6 +46,24 @@ Initial commit
 
 nothing to commit (create/copy files and use "git add" to track)
 ```
+
+Versione abbreviata `git status -s`
+
+```
+$ git status -s
+ M README
+MM Rakefile
+A  lib/git.rb
+M  lib/simplegit.rb
+?? LICENSE.txt
+```
+
+File nuovi che non sono tracciati hanno simbolo *??*, file nuovi hanno *A* mentre file modificati hanno il simbolo *M*. Ci sono due colonne nell'output - la colonna di destra rappresenta lo status nella staging area mentre quella di destra lo status quello del working tree.
+
+Per vedere i cambiamenti non ancora messi in stage: `git diff`
+
+Per vderere quello che è in stage e andrà nella prossima commit: `git diff --staged` o sinonimo `git diff --chached`
+
 # SALVARE I CAMBIAMENTI AL REPOSITORY: git add e git commit
 
 Per salvare nel repository un file o più file della working area è necessario:
