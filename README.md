@@ -270,6 +270,12 @@ To https://github.com/MassimoCappellano/try_git_example.git
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 
 ```
+
+## TIPS:
+- Compare local git branch with remote branch?  
+Ad esempio vedere le differenze tra il _master_ locale con quello remoto: 
+`git diff master origin/master`
+
 # CLONAZIONE DI UN REPOSITORY REMOTO: git clone
 
 Se un progetto è già presente su un repository centrale, è possibile con `git clone <repo_url>` 
