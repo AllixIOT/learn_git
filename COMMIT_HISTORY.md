@@ -256,7 +256,7 @@ Ad esempio:
 
 `git log master..feature`
 
-![by range on branch](https://raw.githubusercontent.com/AllixIOT/learn_git/master/01.PNG)
+![by range on branch](01A.PNG)
 
 ### Filtering Merge Commits
 
