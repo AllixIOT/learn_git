@@ -140,6 +140,71 @@ cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 ```
 Vedi per approfondire [Commit history](COMMIT_HISTORY.md).
 
+# CANCELLAZIONE DEI FILE: `git rm`
+
+Se un file è stato committato e lo si vuole cancellare. 
+
+Ad Esempio:
+
+```
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test
+$ git init
+Initialized empty Git repository in D:/ALLIX/prova_test/.git/
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ touch PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git add PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git status -s
+A  PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git rm PROJECT.txt
+error: the following file has changes staged in the index:
+    PROJECT.txt
+(use --cached to keep the file, or -f to force removal)
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git commit -m "added file"
+[master (root-commit) 66409c2] added file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git rm PROJECT.txt
+rm 'PROJECT.txt'
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ ls
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git status -s
+D  PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git commit -m "deleted file"
+[master 93f7c60] deleted file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git log --oneline --decorate
+93f7c60 (HEAD -> master) deleted file
+66409c2 added file
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+
+```
+
 # .gitignore
 
 Se vogliamo che alcuni tipi di file siano ignorati da git, vanno inseriti nel file _.gitignore_ da creare nella directory di progetto. Anche questo file in genere viene salvato nel repository.
