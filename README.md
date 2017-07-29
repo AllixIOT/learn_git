@@ -198,10 +198,10 @@ $ git log --oneline --decorate
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
 
 ```
-Nell'esempio viene aggiunto il file _PROJECT.txt_ nell'area di stage (`git add`), poi viene committata l'aggiunta del file. 
+Nell'esempio viene aggiunto il file _PROJECT.txt_ nell'area di stage (`git add`). 
 
-Nel frammezzo si era tentata l'operazione `git rm` del file nell'area di stage, senza che però git lo permetta perchè 
-la modifica non è stata committata. Lo permette se con l'opzione `-f` in cui si forza o con l'opzione `--cached` che non cancella il file nella working tree.
+Se a questo punto (cioè prima di eseguire l'operazione di commit) si tentata l'operazione `git rm` del file che è nell'area di stage, git non lo permette perchè 
+l'aggiunta file non è stata committata e quindi sarebbe in questo nodo persa. Lo permette se con l'opzione `-f` in cui si forza l'operazione o con l'opzione `--cached` che non cancella il file nella working tree ma solo dall'area di stage.
 
 Eseguita la commit di aggiunta del file, eseguiamo `git rm` . Eseguendo il comando `ls`, vediamo che il file _PROJECT.txt_ è stato cancellato dal working tree.
 
@@ -210,6 +210,7 @@ Eseguendo poi lo status, il messaggio indica che nell'area di _staging_ il file 
 Eseguiamo infine la commit per rendere persistente la modifica.
 
 [Perchè usare `git rm` invece del semplice `rm`](https://stackoverflow.com/questions/7434449/why-use-git-rm-to-remove-a-file-instead-of-rm)
+
 # .gitignore
 
 Se vogliamo che alcuni tipi di file siano ignorati da git, vanno inseriti nel file _.gitignore_ da creare nella directory di progetto. Anche questo file in genere viene salvato nel repository.
