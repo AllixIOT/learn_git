@@ -152,12 +152,6 @@ $ git init
 Initialized empty Git repository in D:/ALLIX/prova_test/.git/
 
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
-$
-
-cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
-$
-
-cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
 $ touch PROJECT.txt
 
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
@@ -204,6 +198,17 @@ $ git log --oneline --decorate
 cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
 
 ```
+Nell'esempio viene aggiunto il file _PROJECT.txt_ nell'area di stage (`git add`), poi viene committata l'aggiunta del file. 
+
+Nel frammezzo si era tentata l'operazione `git rm` del file nell'area di stage, senza che però git lo permetta perchè 
+la modifica non è stata committata. Lo permette se con l'opzione `-f` in cui si forza o con l'opzione `--cached` che non cancella il file nella working tree.
+
+Eseguita la commit di aggiunta del file, eseguiamo `git rm` . Eseguendo il comando `ls`, vediamo che il file _PROJECT.txt_ è stato cancellato dal working tree.
+
+Eseguendo poi lo status, il messaggio indica che nell'area di _staging_ il file è deleted.
+
+Eseguiamo infine la commit per rendere persistente la modifica.
+
 [Perchè usare `git rm` invece del semplice `rm`](https://stackoverflow.com/questions/7434449/why-use-git-rm-to-remove-a-file-instead-of-rm)
 # .gitignore
 
