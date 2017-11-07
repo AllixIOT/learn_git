@@ -140,6 +140,77 @@ cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/learn_git (master)
 ```
 Vedi per approfondire [Commit history](COMMIT_HISTORY.md).
 
+# CANCELLAZIONE DEI FILE: `git rm`
+
+Se un file è stato committato e lo si vuole cancellare. 
+
+Ad Esempio:
+
+```
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test
+$ git init
+Initialized empty Git repository in D:/ALLIX/prova_test/.git/
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ touch PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git add PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git status -s
+A  PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git rm PROJECT.txt
+error: the following file has changes staged in the index:
+    PROJECT.txt
+(use --cached to keep the file, or -f to force removal)
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git commit -m "added file"
+[master (root-commit) 66409c2] added file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git rm PROJECT.txt
+rm 'PROJECT.txt'
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ ls
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git status -s
+D  PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git commit -m "deleted file"
+[master 93f7c60] deleted file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 PROJECT.txt
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+$ git log --oneline --decorate
+93f7c60 (HEAD -> master) deleted file
+66409c2 added file
+
+cam@DESKTOP-6FO16O4 MINGW64 /d/ALLIX/prova_test (master)
+
+```
+Nell'esempio viene aggiunto il file _PROJECT.txt_ nell'area di stage (`git add`). 
+
+Se a questo punto (cioè prima di eseguire l'operazione di commit) si tentata l'operazione `git rm` del file che è nell'area di stage, git non lo permette perchè 
+l'aggiunta file non è stata committata e quindi sarebbe in questo nodo persa. Lo permette se con l'opzione `-f` in cui si forza l'operazione o con l'opzione `--cached` che non cancella il file nella working tree ma solo dall'area di stage.
+
+Eseguita la commit di aggiunta del file, eseguiamo `git rm` . Eseguendo il comando `ls`, vediamo che il file _PROJECT.txt_ è stato cancellato dal working tree.
+
+Eseguendo poi lo status, il messaggio indica che nell'area di _staging_ il file è deleted.
+
+Eseguiamo infine la commit per rendere persistente la modifica.
+
+[Perchè usare `git rm` invece del semplice `rm`](https://stackoverflow.com/questions/7434449/why-use-git-rm-to-remove-a-file-instead-of-rm)
+
 # .gitignore
 
 Se vogliamo che alcuni tipi di file siano ignorati da git, vanno inseriti nel file _.gitignore_ da creare nella directory di progetto. Anche questo file in genere viene salvato nel repository.
@@ -336,6 +407,8 @@ git clone [--template=<template_directory>]
 https://www.atlassian.com/git/tutorials completare _Getting Start_
 
 poi la parte _Collaborating_ per lavorare con repositori remoti.
+
+Un altro approccio per imparare git: [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)
 
 ## REFERENZE
 
